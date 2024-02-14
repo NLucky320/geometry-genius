@@ -118,22 +118,68 @@
                             0.5 * d <sub>1</sub> *
                             d <sub>2</sub></p>
                         <div>
-                            <input id="triangle-base" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
+                            <input id="" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
                                 placeholder="d₁"><span class="pl-2 pr-2">cm</span>
-                            <input id="triangle-height" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
+                            <input id="" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
                                 placeholder="d₂"><span class="pl-2 pr-2">cm</span>
                         </div>
                         <div>
                             <p>Area: <span id="triangle-area"></span> <span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions ">
-                            <button onclick="calculateTriangleArea()"
+                            <button onclick="calculateRhombusArea()"
+                                class="btn w-full bg-[#1090D8] text-white font-bold text-xl ">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pentagon card -->
+                <div class="card mx-w-[437px] mx-auto bg-[#FFF] shadow-xl text-center  px-11 pt-12">
+                    <figure><img src="./images/pentagon.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-3xl">Pentagon</h2>
+                        <p>Area (A) =
+                            0.5 * p * b </p>
+                        <div>
+                            <input id="pentagon-base" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
+                                placeholder="p"><span class="pl-2 pr-2">cm</span>
+                            <input id="pentagon-height" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
+                                placeholder="b"><span class="pl-2 pr-2">cm</span>
+                        </div>
+                        <div>
+                            <p>Area: <span id="pentagon-area"></span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <div class="card-actions ">
+                            <button onclick="calculatePentagonArea()"
+                                class="btn w-full bg-[#1090D8] text-white font-bold text-xl ">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse card -->
+                <div class="card mx-w-[437px] mx-auto bg-[#FFF] shadow-xl text-center  px-11 pt-12">
+                    <figure><img src="./images/ellipse.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-3xl">Ellipse</h2>
+                        <p>Area (A) =
+                            πab </p>
+                        <div>
+                            <input id="-" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
+                                placeholder="a"><span class="pl-2 pr-2">cm</span>
+                            <input id="" class="w-24 h-8 text-2xl p-2 rounded-s bg-[#F1F1F1]" type="text"
+                                placeholder="b"><span class="pl-2 pr-2">cm</span>
+                        </div>
+                        <div>
+                            <p>Area: <span id="ellipse-area"></span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <div class="card-actions ">
+                            <button onclick="calculateEllipseArea()"
                                 class="btn w-full bg-[#1090D8] text-white font-bold text-xl ">Calculate</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="w-[437px] h-[454px] border-2 border-[#1111111A] shadow-2xl rounded-2xl ">
+            <div class="w-[437px] mx-auto h-[454px] border-2 border-[#1111111A] shadow-2xl rounded-2xl ">
                 <!-- area calculator container -->
                 <h3 class="text-xl p-4 text-center font-bold text-[#111111CC] underline">Area Calculation</h3>
             </div>
