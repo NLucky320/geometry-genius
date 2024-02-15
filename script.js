@@ -56,8 +56,8 @@ function calculateTriangleArea() {
   const calculateArea = 0.5 * base * height;
   setInnerTextById("triangle-area", calculateArea);
 
-  // const showInList = createElementAndSetValue("triangle-area", calculateArea);
-  // return showInList;
+  const showInList = createElementAndSetValue("triangle-area", calculateArea);
+  return showInList;
 }
 
 // rectangle area calculation
@@ -68,6 +68,9 @@ function calculateRectangleArea() {
 
   const calculateArea = width * length;
   setInnerTextById("rectangle-area", calculateArea);
+
+  const showInList = createElementAndSetValue("rectangle-area", calculateArea);
+  return showInList;
 }
 
 // parallelogram area calculation
@@ -77,6 +80,12 @@ function calculateParallelogramArea() {
   const height = getInputValueById("parallelogram-height");
   const calculateArea = base * height;
   setInnerTextById("parallelogram-area", calculateArea);
+
+  const showInList = createElementAndSetValue(
+    "parallelogram-area",
+    calculateArea
+  );
+  return showInList;
 }
 
 // rhombus area calculation
@@ -85,6 +94,9 @@ function calculateRhombusArea() {
   const height = getInputValueById("rhombus-height");
   const calculateArea = 0.5 * base * height;
   setInnerTextById("rhombus-area", calculateArea);
+
+  const showInList = createElementAndSetValue("rhombus-area", calculateArea);
+  return showInList;
 }
 
 // pentagon area calculation
@@ -94,6 +106,9 @@ function calculatePentagonArea() {
   const apothem = getInputValueById("pentagon-apothem");
   const calculateArea = 0.5 * perimeter * apothem;
   setInnerTextById("pentagon-area", calculateArea);
+
+  const showInList = createElementAndSetValue("pentagon-area", calculateArea);
+  return showInList;
 }
 
 // ellipse area calculation
@@ -101,8 +116,11 @@ function calculatePentagonArea() {
 function calculateEllipseArea() {
   const majorAxis = getInputValueById("semi-major-axis");
   const minorAxis = getInputValueById("semi-minor-axis");
-  const calculateArea = 3.1416 * majorAxis * minorAxis;
+  const calculateArea = 3.14 * majorAxis * minorAxis;
   setInnerTextById("ellipse-area", calculateArea);
+
+  const showInList = createElementAndSetValue("ellipse-area", calculateArea);
+  return showInList;
 }
 // common formula
 
@@ -118,14 +136,15 @@ function setInnerTextById(elementId, calculateArea) {
   element.innerText = calculateArea;
 }
 
-// function createElementAndSetValue(liContent, value) {
-//   const createLi = document.createElement("li");
-//   createLi.innerText = `${liContent} : ${value} cm²`;
-//   createLi.classList.add("text-xl", font - medium);
-//   const addToParent = listContainer.appendChild(createLi);
-//   return addToParent;
-// }
+function createElementAndSetValue(liContent, value) {
+  const createList = document.createElement("li");
+  createList.innerText = `${liContent} : ${value} cm²`;
+  // createList.classList.add("text-xl", "font-medium");
+  const addToParent = listContainer.appendChild(createList);
+  return addToParent;
+}
 
+// mouseover function
 const onMouseOver = document.querySelectorAll(".onMouseOver");
 
 for (const card of onMouseOver) {
