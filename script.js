@@ -117,9 +117,12 @@ function calculateEllipseArea() {
   const majorAxis = getInputValueById("semi-major-axis");
   const minorAxis = getInputValueById("semi-minor-axis");
   const calculateArea = 3.14 * majorAxis * minorAxis;
-  setInnerTextById("ellipse-area", calculateArea);
+  setInnerTextById("ellipse-area", calculateArea.toFixed(2));
 
-  const showInList = createElementAndSetValue("ellipse-area", calculateArea);
+  const showInList = createElementAndSetValue(
+    "ellipse-area",
+    calculateArea.toFixed(2)
+  );
   return showInList;
 }
 // common formula
