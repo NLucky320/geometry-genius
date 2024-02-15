@@ -125,3 +125,22 @@ function setInnerTextById(elementId, calculateArea) {
 //   const addToParent = listContainer.appendChild(createLi);
 //   return addToParent;
 // }
+
+const onMouseOver = document.querySelectorAll(".onMouseOver");
+
+for (const card of onMouseOver) {
+  card.addEventListener("mouseover", function () {
+    if (
+      card === onMouseOver[0] ||
+      card === onMouseOver[1] ||
+      card === onMouseOver[2]
+    ) {
+      card.style.backgroundColor = "#FBBCED";
+    } else {
+      card.style.backgroundColor = "#69C7F0";
+    }
+  });
+  card.addEventListener("mouseout", function () {
+    card.style.backgroundColor = "";
+  });
+}
